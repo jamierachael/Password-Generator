@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <style>
+        body {
+            background-color: #E8E8E8;
+            margin: 0 auto;
+        }
+
+        #wrapper {
+            background-color: #F5F5F5;
+            margin-left: 15%;
+            padding-bottom: 50px;
+            padding-top: 30px;
+            margin-top: 30px;
+            width: 980px;
+        }
+
+        #content {
+            margin-left: 10%;
+            margin-right: 10%;
+            background-color: #FFFFFF;
+            box-shadow: 5px 10px 18px #888888;
+
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 45px;
+
+        }
+
+        h2 {
+            margin-left: 20px;
+            padding-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            padding: 10%;
+            border: dashed 1px gray;
+            margin-left: 10%;
+            padding-left: 15%;
+            padding-right: 15%;
+            width: 50%;
+        }
+
+        #btn {
+            margin-top: 20px;
+        }
+
+        #generate {
+            background-color: #f44336;
+            font-size: 20px;
+            padding: 14px 40px;
+            border-radius: 15px;
+            margin-left: 18%;
+            margin-bottom: 10px;
+        }
+
+        #copy {
+            background-color: #e7e7e7;
+            font-size: 20px;
+            padding: 14px 40px;
+            border-radius: 15px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+        <div id="content">
+            <h2>Generate a Password</h2>
+            <hr>
+            <textarea readonly id="password" placeholder="Your Secure Password"
+                aria-label="Generated Password"></textarea>
+            <hr>
+            <div id="btn">
+                <button id="generate">Generate Password</button>
+                <button id="copy">
+                    Copy to Clipboard
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
