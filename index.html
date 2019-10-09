@@ -14,58 +14,109 @@
 
     <script>
         // Start Psuedo code
-        // Problem: The user will be prompted to choose from the following password criteria:
-        // Solution: Will need a prompt
-        // Problem: Length (must be between 8 and 128 characters)
-        // All prompts and confirms need to be set to a variable
-        var enter = prompt("How many characters would you like your password? Choose between 8 and 128");
+        // The user will be prompted to choose from the following password criteria: 8 and 128 characters
+        // The user will recieve a confirm for: 
+        // Password containing special characters, numbers, and uppercase
+        // For Uppercase: 
+        // Either 4 individual ones, or 3 with toLowerCase to Uppercase conversion
+        // This will need to randomly generate a selection or randomly select array data, so math.random and math.floor will need to be used.     
+        // The application should validate user input and ensure that at least one character type is selected.
+        // Solution: If, else if statement (similar to car input)
+        // Problem: Once all prompts are answered, the user will be presented with a password matching the answered prompts. Displaying the generated password in an alert is acceptable, but attempt to write the password to the page instead.
+        // Solution: setAttribute
+        // Problem: As a bonus, the user should also have the option to click a button to copy the password to their clipboard.
+        // While loop?           
+        // Solution: Event listener?
+        // Use appendchild lesson from today to add password to textarea 
+
+        // * while(enter) {
+
+        // * }
+
+        // * getElementById("password")
+
+        // * if(confirmNumber) {
+
+        // * } else if(confirmCharacter) {
+
+        // * } else if(confirmUppercase) {
+
+        // * }
+
+        // * confirmUppercase = confirmUppercase.toUpperCase();
+
+        // Start working code
+        // User input variables: 
+
+
+        var enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
+
+        console.log(enter);
+
         var confirmNumber = confirm("Will this contain numbers?");
         var confirmCharacter = confirm("Will this contain special characters?");
         var confirmUppercase = confirm("Will this contain Uppercase letters?");
 
-        // Solution: Will need a variable
-        // Problem: Character type:
-        // Solution: Will need variables. 
-        // Solution: Either 4 individual ones, or 3 with toLowerCase to Uppercase conversion
-        // Solution: This will need to randomly generate a selection or randomly select array data, so math.random and math.floor will need to be used.   
-        // Criteria: Special characters (see examples)
+        // Start Password variables: 
+        // Special characters 
         var character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
-        // Criteria: Numeric characters
+        // Numeric characters
         var number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-        // Criteria: Alphabetical characters
+        // Alphabetical characters
         var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        // Choices declared outside the if statement so they can be concatenated upon condition
+        var choices;
 
 
-        // Criteria: Lowercase characters
-        // Criteria: Uppercase characters    
-        // Problem: The application should validate user input and ensure that at least one character type is selected.
-        // Solution: If, else if statement (similar to car input)
-        // Problem: Once all prompts are answered, the user will be presented with a password matching the answered prompts. Displaying the generated password in an alert is acceptable, but attempt to write the password to the page instead.
-        // Solution: Document.write.ln ?
-        // Problem: As a bonus, the user should also have the option to click a button to copy the password to their clipboard.
-        // While loop?           
-        // Solution: Event listener?
+        // If confirmed character, number and uppercase all items are provided
+        if (confirmCharacter && confirmNumber && confirmUppercase) {
+            // converts letters to uppercase 
+            toUpper = function (x) {
+                return x.toUpperCase();
+            };
+            // creates a variable for uppercase conversion
+            var alpha2 = alpha.map(toUpper);
+            choices = character.concat(number, alpha, alpha2);
+        }
+        // Else if confirmed character and number, uppercase is ommited. 
+        // User received characters, numbers and lowercase only
+        else if (confirmCharacter && confirmNumber) {
+            choices = character.concat(number, alpha);
+        }
+        // Else if confirmed character, number and character  uppercase is ommited.
+        // User received characters, lowercase only 
+        else if (confirmCharacter) {
+            choices = character.concat(alpha);
+        } else {
+            choices = alpha;
+        };
 
-        // Use appendchild lesson from today to add password to textarea 
+        // password variable is an array placeholder for user generated amount of length
+        var password = [];
+        // Start random selection variables:
+        // Random selection for all variables: 
 
-        var pickCharacter = character[Math.floor(Math.random() * character.length)];
-        console.log(pickCharacter);
+        for (var i = 0; i < enter; i++) {
+            var pickChoices = choices[Math.floor(Math.random() * choices.length)];
+            password.push(pickChoices);
 
-        var pickNumber = number[Math.floor(Math.random() * number.length)];
-        console.log(pickNumber);
+        }
+        // This joins the password array and converts it to a string
+        var ps = password.join("");
+        console.log(password);
+        console.log(ps);
 
-        var pickAlpha = alpha[Math.floor(Math.random() * alpha.length)];
-        console.log(pickAlpha);
 
-        // while(enter) {
-
-        // }
-
-        // if() {
-
-        // }
-
-        // getElementById("password")
+        // Random selection for individual variables:
+        // Random selection for special character variables:
+        // var pickCharacter = character[Math.floor(Math.random() * number.length)];
+        // console.log(pickCharacter);
+        // // Random selection for number variables:
+        // var pickNumber = number[Math.floor(Math.random() * number.length)];
+        // console.log(pickNumber);
+        // // Random selection for alphabet variables:
+        // var pickAlpha = alpha[Math.floor(Math.random() * alpha.length)];
+        // console.log(pickAlpha);
 
 
     </script>
