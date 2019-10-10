@@ -101,8 +101,20 @@
 
         // test 
 
+        // This puts the password value into the textbox
+        // Error: when pressing generate repeatedly, it produces the same password, not a new one
+        // Must refresh for new
+
         function generatePassword() {
             document.getElementById("password").value = document.getElementById("generate").value += ps;
+        }
+
+        // This copies the password value - works
+        function copyPassword() {
+            document.getElementById("password").select();
+            document.execCommand("Copy");
+            alert("Password copied to clipboard!");
+
         }
 
 
@@ -121,10 +133,9 @@
                 aria-label="Generated Password"></textarea>
             <hr>
             <div id="btn">
-                <button id="generate" onclick="generatePassword()" value="">Generate
+                <button id="generate" onclick="generatePassword()">Generate
                     Password</button>
-                <button id="copy">
-                    Copy to Clipboard
+                <button onclick="copyPassword()">Copy to Clipboard</button>
                 </button>
 
             </div>

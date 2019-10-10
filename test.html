@@ -101,6 +101,14 @@
         console.log(password);
         console.log(ps);
 
+        // Function to copy
+
+        function copyPassword() {
+            document.getElementById("password").select();
+            document.execCommand("Copy");
+            alert("Password copied to clipboard!");
+
+        }
 
         // * Random selection for individual variables:
         // Random selection for special character variables:
@@ -134,8 +142,7 @@
             <hr>
             <div id="btn">
                 <button id="generate" onclick="myFunction()" value="Hello World!">Generate Password</button>
-                <button id="copy">
-                    Copy to Clipboard
+                <button id="copy" onclick="copyPassword()">Copy to Clipboard</button>
                 </button>
 
             </div>
