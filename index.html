@@ -30,43 +30,42 @@
 
         // Start working code
         // User input variables: 
-
         var enter;
-
         var confirmNumber;
         var confirmCharacter;
         var confirmUppercase;
         var confirmLowercase;
+        // Start Password variable values: 
+        // Special characters 
+        character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+        // Numeric characters
+        number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // Alphabetical characters
+        alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+        // Space is for the Uppercase conversion
+        space = [];
+        // Choices declared outside the if statement so they can be concatenated upon condition
+        var choices;
 
-
+        // Start function to generate password
         function generatePassword() {
-
-
+            // Asks for user input
             enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
             console.log(enter);
 
+            // Validates user input
+            while (enter < 8 || enter > 128) {
+                // Start user input prompts
+                enter = parseInt(prompt("You must choose between 8 and 128"));
+            };
+            // Continues once user input is validated
             confirmNumber = confirm("Will this contain numbers?");
             confirmCharacter = confirm("Will this contain special characters?");
             confirmUppercase = confirm("Will this contain Uppercase letters?");
             confirmLowercase = confirm("Will this contain Lowercase letters?");
-            // Use this variable to add to if/else stateme
-            //var confirmLower = confirm("Will this contain Lowercase letters?");
 
-            // Start Password variables: 
-            // Special characters 
-            var character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
-            // Numeric characters
-            var number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-            // Alphabetical characters
-            var alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-            // Choices declared outside the if statement so they can be concatenated upon condition
-            var space = [];
+            // Start if statement that uses user input prompts to determine choices
 
-
-
-
-            var choices;
-            // If confirmed character, number and uppercase all items are provided
             // Else if for 4 positive options
             if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
                 // converts letters to uppercase 
@@ -131,9 +130,9 @@
 
             // password variable is an array placeholder for user generated amount of length
             var password = [];
+
             // Start random selection variables:
             // Random selection for all variables: 
-
             for (var i = 0; i < enter; i++) {
                 var pickChoices = choices[Math.floor(Math.random() * choices.length)];
                 password.push(pickChoices);
@@ -143,27 +142,21 @@
             UserInput(ps);
             return ps;
         }
-
-
-
-
-
-        // Random selection for individual variables:
-        // Random selection for special character variables:
-        // var pickCharacter = character[Math.floor(Math.random() * number.length)];
-        // console.log(pickCharacter);
-        // // Random selection for number variables:
-        // var pickNumber = number[Math.floor(Math.random() * number.length)];
-        // console.log(pickNumber);
-        // // Random selection for alphabet variables:
-        // var pickAlpha = alpha[Math.floor(Math.random() * alpha.length)];
-        // console.log(pickAlpha);
+        // This puts the password value into the textbox
+        function UserInput(ps) {
+            document.getElementById("password").value = ps;
+            console.log(ps);
+        }
+        // This copies the password value - works
+        // Code example demonstrated in a youtube video: 
+        // Source: https://youtu.be/9sT03jEwcaw
+        function copyPassword() {
+            document.getElementById("password").select();
+            document.execCommand("Copy");
+            alert("Password copied to clipboard!");
+        }
 
         // test 
-
-        // This puts the password value into the textbox
-        // Error: when pressing generate repeatedly, it produces the same password, not a new one
-        // Must refresh for new
 
         // Try this instead of generate password function: 
 
@@ -175,24 +168,7 @@
         // function generatePassword() {
         //     generate.textContent = value + ps;
         // };
-        // Do I need a function for the prompt + confirm ?
-
-        function UserInput(ps) {
-            document.getElementById("password").value = ps;
-            console.log(ps);
-
-        }
-
-        // This copies the password value - works
-        // Code example demonstrated in a youtube video: 
-        // Source: https://youtu.be/9sT03jEwcaw
-        function copyPassword() {
-            document.getElementById("password").select();
-            document.execCommand("Copy");
-            alert("Password copied to clipboard!");
-
-        }
-
+        // This puts the password value into the textbox
 
     </script>
 </head>
