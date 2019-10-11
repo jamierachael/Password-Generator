@@ -1,17 +1,4 @@
-// Start Psuedo code
-// The user will be prompted to choose from the following password criteria: 8 and 128 characters
-// The user will recieve a confirm for: 
-// Password containing special characters, numbers, and uppercase
-// Either 4 variables individual ones, or 3 with toLowerCase to Uppercase conversion
-// This will need to randomly generate a selection or randomly select array data, so math.random and math.floor will need to be used.     
-// The application should validate user input and ensure that at least one character type is selected.
-// Solution: If, else if statement (similar to car input)
-// Problem: Once all prompts are answered, the user will be presented with a password matching the answered prompts. Displaying the generated password in an alert is acceptable, but attempt to write the password to the page instead.
-// Solution: setAttribute
-// Problem: As a bonus, the user should also have the option to click a button to copy the password to their clipboard.
-// While loop?           
-// Solution: Event listener?
-// Use appendchild lesson from today to add password to textarea 
+
 
 // Start working code
 // User input variables: 
@@ -38,7 +25,7 @@ function generatePassword() {
     enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
     // First if statement for user validation 
     if (!enter) {
-        alert("Needs a value!");
+        alert("Needs a value");
     } else if (enter < 8 || enter > 128) {
         // Validates user input
         // Start user input prompts

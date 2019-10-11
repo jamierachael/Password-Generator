@@ -2,8 +2,8 @@
 # Homework-3 Password-Generator
 ## Jamie Morris Homework-3 Random Password Generator
 
-* ['Responsive-Portfolio'](https://github.com/jamierachael/Responsive-Portfolio)
-* ['Responsive-Portfolio'](https://jamierachael.github.io/Responsive-Portfolio/)
+* ['Responsive-Portfolio'](https://github.com/jamierachael/Password-Generator)
+* ['Responsive-Portfolio'](https://jamierachael.github.io/Password-Generator/)
 
 ### Summary
 * HTML and CSS and Javascript documents create a random password generator 
