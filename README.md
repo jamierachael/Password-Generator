@@ -78,9 +78,8 @@
     * These use W3C Code Validators for HTML and CSS
     * Please provide feedback whether this image syntax is correct
         * Format: ![Validator-HTML-Index](assets/images/Validator-HTML-Index)
-        * Format: ![Validator-HTML-Portfolio](assets/images/Validator-HTML-Portfolio)
-        * Format: ![Validator-HTML-Contact](assets/images/Validator-HTML-Contact)
         * Format: ![Validator-CSS](assets/images/Validator-CSS)
+        * Format: ![Validator-CSS](assets/images/Validator-JS)
 
 
 
