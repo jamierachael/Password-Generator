@@ -35,10 +35,8 @@ var choices;
 // Start function to generate password
 function generatePassword() {
     // Asks for user input
-
     enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
-    console.log(enter);
-
+    // First if statement for user validation 
     if (!enter) {
         alert("Needs a value!");
     } else if (enter < 8 || enter > 128) {
@@ -52,8 +50,7 @@ function generatePassword() {
         confirmUppercase = confirm("Will this contain Uppercase letters?");
         confirmLowercase = confirm("Will this contain Lowercase letters?");
     };
-    // Start if statement that uses user input prompts to determine choices
-
+    // First if statement that uses user input prompts to determine choices
     // Else if for 4 positive options
     if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
         // converts letters to uppercase 
@@ -114,8 +111,6 @@ function generatePassword() {
     else if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
         choices = alert("You must choice a criteria!");
     };
-
-
     // password variable is an array placeholder for user generated amount of length
     var password = [];
 
@@ -133,7 +128,7 @@ function generatePassword() {
 // This puts the password value into the textbox
 function UserInput(ps) {
     document.getElementById("password").value = ps;
-    console.log(ps);
+
 }
 // This copies the password value - works
 // Code example demonstrated in a youtube video: 
@@ -143,17 +138,3 @@ function copyPassword() {
     document.execCommand("Copy");
     alert("Password copied to clipboard!");
 }
-
-        // test 
-
-        // Try this instead of generate password function: 
-
-        // var generate = document.querySelector("#generate");
-        // generate.addEventListener("click", function () {
-        //     generatePassword();
-        // });
-
-        // function generatePassword() {
-        //     generate.textContent = value + ps;
-        // };
-        // This puts the password value into the textbox
