@@ -50,20 +50,23 @@
         // Start function to generate password
         function generatePassword() {
             // Asks for user input
+
             enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
             console.log(enter);
 
-            // Validates user input
-            while (enter < 8 || enter > 128) {
+            if (!enter) {
+                alert("Needs a value");
+            } else if (enter < 8 || enter > 128) {
+                // Validates user input
                 // Start user input prompts
                 enter = parseInt(prompt("You must choose between 8 and 128"));
+            } else {
+                // Continues once user input is validated
+                confirmNumber = confirm("Will this contain numbers?");
+                confirmCharacter = confirm("Will this contain special characters?");
+                confirmUppercase = confirm("Will this contain Uppercase letters?");
+                confirmLowercase = confirm("Will this contain Lowercase letters?");
             };
-            // Continues once user input is validated
-            confirmNumber = confirm("Will this contain numbers?");
-            confirmCharacter = confirm("Will this contain special characters?");
-            confirmUppercase = confirm("Will this contain Uppercase letters?");
-            confirmLowercase = confirm("Will this contain Lowercase letters?");
-
             // Start if statement that uses user input prompts to determine choices
 
             // Else if for 4 positive options
