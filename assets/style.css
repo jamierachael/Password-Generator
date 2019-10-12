@@ -29,6 +29,9 @@ h1 {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 45px;
+    font-size: 2em;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
 
 }
 /* Styles for h2 */
@@ -36,6 +39,9 @@ h2 {
     margin-left: 20px;
     padding-top: 10px;
     margin-bottom: 10px;
+    font-size: 1.5em;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
 }
 /* Styles for textarea */
 textarea {
@@ -110,7 +116,7 @@ textarea {
      body {
         max-width: 640px;
     } 
-    /* Styles for the wrapper div */
+    
      #wrapper {
         width: 100%;
         }
