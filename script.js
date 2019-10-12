@@ -25,6 +25,11 @@ var toUpper = function (x) {
 // creates a variable for uppercase conversion
 alpha2 = alpha.map(toUpper);
 
+get.addEventListener("click", function () {
+    ps = generatePassword();
+    document.getElementById("password").placeholder = ps;
+});
+
 // Start function to generate password
 function generatePassword() {
     // Asks for user input
