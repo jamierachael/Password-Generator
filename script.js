@@ -25,10 +25,12 @@ var toUpper = function (x) {
 // creates a variable for uppercase conversion
 alpha2 = alpha.map(toUpper);
 
-// get.addEventListener("click", function () {
-//     ps = generatePassword();
-//     document.getElementById("password").placeholder = ps;
-// });
+var get = document.querySelector("#generate");
+
+get.addEventListener("click", function () {
+    ps = generatePassword();
+    document.getElementById("password").placeholder = ps;
+});
 
 // Start function to generate password
 function generatePassword() {
@@ -41,7 +43,7 @@ function generatePassword() {
         // Validates user input
         // Start user input prompts
         enter = parseInt(prompt("You must choose between 8 and 128"));
-        //   generatePassword() - This loops it, but makes it impossible to refresh the page
+
     } else {
         // Continues once user input is validated
         confirmNumber = confirm("Will this contain numbers?");
@@ -53,7 +55,7 @@ function generatePassword() {
     // Else if for 4 negative options
     if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
         choices = alert("You must choose a criteria!");
-        //   generatePassword() - This loops it, but makes it impossible to refresh the page
+
     }
     // First if statement that uses user input prompts to determine choices
     // Else if for 4 positive options
