@@ -18,7 +18,7 @@ alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "
 space = [];
 // Choices declared outside the if statement so they can be concatenated upon condition
 var choices;
-
+// converts letters to uppercase 
 var toUpper = function (x) {
     return x.toUpperCase();
 };
@@ -31,11 +31,12 @@ function generatePassword() {
     enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
     // First if statement for user validation 
     if (!enter) {
-        alert("Needs a value");
+        alert("This needs a value");
     } else if (enter < 8 || enter > 128) {
         // Validates user input
         // Start user input prompts
         enter = parseInt(prompt("You must choose between 8 and 128"));
+        //   generatePassword() - This loops it, but makes it impossible to refresh the page
     } else {
         // Continues once user input is validated
         confirmNumber = confirm("Will this contain numbers?");
@@ -43,10 +44,15 @@ function generatePassword() {
         confirmUppercase = confirm("Will this contain Uppercase letters?");
         confirmLowercase = confirm("Will this contain Lowercase letters?");
     };
+
+    // Else if for 4 negative options
+    if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
+        choices = alert("You must choose a criteria!");
+        //   generatePassword() - This loops it, but makes it impossible to refresh the page
+    }
     // First if statement that uses user input prompts to determine choices
     // Else if for 4 positive options
-    if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
-        // converts letters to uppercase 
+    else if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
 
         choices = character.concat(number, alpha, alpha2);
     }
@@ -95,11 +101,8 @@ function generatePassword() {
     // Created space variable to fill uppercase conversion
     else if (confirmUppercase) {
         choices = space.concat(alpha2);
-    }
-    // Else if for 4 negative options
-    else if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
-        choices = alert("You must choose a criteria!");
     };
+
     // password variable is an array placeholder for user generated amount of length
     var password = [];
 
