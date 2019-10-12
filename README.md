@@ -2,9 +2,9 @@
 # Homework-3 Password-Generator
 ## Jamie Morris Homework-3 Random Password Generator
 
-* ['Responsive-Portfolio'](https://github.com/jamierachael/Password-Generator)
-* ['Responsive-Portfolio'](https://jamierachael.github.io/Password-Generator/)
-*['Responsive-Portfolio'](https://drive.google.com/file/d/10da4Te-ywl3aBuG3pL4jRAxBcFI6w871/view)
+* ['Password-Generator'](https://github.com/jamierachael/Password-Generator)
+* ['Password-Generator'](https://jamierachael.github.io/Password-Generator/)
+* ['Password-Generator'](https://drive.google.com/file/d/10da4Te-ywl3aBuG3pL4jRAxBcFI6w871/view)
 
 
 
