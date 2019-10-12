@@ -27,13 +27,13 @@
 * The application should validate user input and ensure that at least one character type is selected.
     * If, else if statement (similar to car input)
 * Once all prompts are answered, the user will be presented with a password matching the answered prompts. Displaying the generated password in an alert is acceptable, but attempt to write the password to the page instead.
-    * Event listener will determine the password output AND populate the value into the test area.
+    * Event listener will determine the password output with function to populate the value into the test area.
 * As a bonus, the user should also have the option to click a button to copy the password to their clipboard.
     * Copy execCommand in event listener
 
 ### This project has script features of:
 * Variable declaration area 
-* An event listener called generatePassword
+* An event listener (onclick) called generatePassword
     * This will prompt the user for input between 8-128
     * This variable is changed to an interger using ParseInt()
     * This will validate that the input is a number within range, or is a number
@@ -43,7 +43,7 @@
 * A for loop will loop through the enter prompt until it reaches the number entered by user. 
 * A password variable takes the value from the for loop, and converts it to a string. 
 * The string value then populates into the text area for the user using a UserInput function.
-* An event listener has also been created for the copy to clipboard feauture. 
+* An event listener (onlick) has also been created for the copy to clipboard feauture. 
 
 ### This project has media Queries for:
 * max-width: 980px 
@@ -69,7 +69,7 @@
 * One Javascript Page
         * Contains: 
         * Variables, including arrays and value placeholders
-        * Two event listeners, 
+        * Two event listeners
         * Two if/else if statements
         * One function outside of first event listener
 

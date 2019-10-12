@@ -13,6 +13,29 @@
         /* Test styles */
     </style>
 
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+        <div id="content">
+            <h2>Generate a Password</h2>
+            <hr>
+            <textarea readonly id="password" placeholder="Your Secure Password"
+                aria-label="Generated Password"></textarea>
+            <hr>
+            <div id="btn">
+                <button id="generate">Generate
+                    Password</button>
+                <button id="copy">Copy to Clipboard</button>
+                </button>
+
+            </div>
+        </div>
+    </div>
     <script>
         // Start Psuedo code
         // The user will be prompted to choose from the following password criteria: 8 and 128 characters
@@ -28,6 +51,9 @@
         // While loop?           
         // Solution: Event listener?
         // Use appendchild lesson from today to add password to textarea 
+
+
+
 
         // Start working code
         // User input variables: 
@@ -47,16 +73,24 @@
         space = [];
         // Choices declared outside the if statement so they can be concatenated upon condition
         var choices;
+        // Test new event listener
+        get = document.querySelector("#generate");
+
+        get.addEventListener("click", function () {
+            ps = generatePassword();
+            document.getElementById("password").placeholder = ps;
+        });
 
         // Start function to generate password
         function generatePassword() {
             // Asks for user input
-
             enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
-            console.log(enter);
-
+            // First if statement for user validation 
             if (!enter) {
                 alert("Needs a value");
+                // Can I use return here?
+                // alert("You must choice a criteria!");
+                // return enter;
             } else if (enter < 8 || enter > 128) {
                 // Validates user input
                 // Start user input prompts
@@ -68,8 +102,7 @@
                 confirmUppercase = confirm("Will this contain Uppercase letters?");
                 confirmLowercase = confirm("Will this contain Lowercase letters?");
             };
-            // Start if statement that uses user input prompts to determine choices
-
+            // First if statement that uses user input prompts to determine choices
             // Else if for 4 positive options
             if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
                 // converts letters to uppercase 
@@ -126,12 +159,29 @@
             else if (confirmUppercase) {
                 choices = space.concat(alpha2)
             }
+
+            // Try this! 
+            // // start if only test 
+            // if (confirmCharacter == true) {
+            //     choices.(concat)character;
+            // }
+            // move last else if to top
+            // Make sure "Choices" has an empty array
+            // if (confirmNumber == true) {
+            //     choices = number;
+            // }
+            // if (confirmLowercase == true) {
+            //     choices = alpha;
+            // }
+            // // Created space variable to fill uppercase conversion
+            // if (confirmUppercase == true) {
+            //     choices = space.concat(alpha2)
+            // }
+
             // Else if for 4 negative options
             else if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
-                choices = alert("You must choice a criteria!");
+                choices = alert("You must choose a criteria!");
             };
-
-
             // password variable is an array placeholder for user generated amount of length
             var password = [];
 
@@ -142,61 +192,51 @@
                 password.push(pickChoices);
             }
             // This joins the password array and converts it to a string
+            // Worked with a tutor to incorporate this option
             var ps = password.join("");
             UserInput(ps);
             return ps;
         }
+
         // This puts the password value into the textbox
+        // Changed function input to use textcontent
         function UserInput(ps) {
-            document.getElementById("password").value = ps;
-            console.log(ps);
+            // document.getElementById("password").value = ps;
+            document.getElementById("password").textContent = ps;
+
         }
         // This copies the password value - works
         // Code example demonstrated in a youtube video: 
         // Source: https://youtu.be/9sT03jEwcaw
+
+        var copy = document.querySelector("#copy");
+
+        copy.addEventListener("click", function () {
+            copyPassword();
+        });
+
         function copyPassword() {
             document.getElementById("password").select();
             document.execCommand("Copy");
             alert("Password copied to clipboard!");
         }
 
-        // test 
 
-        // Try this instead of generate password function: 
+            // test 
 
-        // var generate = document.querySelector("#generate");
-        // generate.addEventListener("click", function () {
-        //     generatePassword();
-        // });
+            // Try this instead of generate password function: 
 
-        // function generatePassword() {
-        //     generate.textContent = value + ps;
-        // };
+            // var generate = document.querySelector("#generate");
+            // generate.addEventListener("click", function () {
+            //     generatePassword();
+            // });
+
+            // function generatePassword() {
+            //     generate.textContent = value + ps;
+            // };
 
 
     </script>
-</head>
-
-<body>
-    <div id="wrapper">
-        <header>
-            <h1>Password Generator</h1>
-        </header>
-        <div id="content">
-            <h2>Generate a Password</h2>
-            <hr>
-            <textarea readonly id="password" placeholder="Your Secure Password"
-                aria-label="Generated Password"></textarea>
-            <hr>
-            <div id="btn">
-                <button id="generate" onclick="generatePassword()">Generate
-                    Password</button>
-                <button id="copy" onclick="copyPassword()">Copy to Clipboard</button>
-                </button>
-
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>

@@ -96,7 +96,7 @@ function generatePassword() {
     }
     // Else if for 4 negative options
     else if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
-        choices = alert("You must choice a criteria!");
+        choices = alert("You must choose a criteria!");
     };
     // password variable is an array placeholder for user generated amount of length
     var password = [];
@@ -114,8 +114,9 @@ function generatePassword() {
     return ps;
 }
 // This puts the password value into the textbox
+// Changed function input to use textcontent
 function UserInput(ps) {
-    document.getElementById("password").value = ps;
+    document.getElementById("password").textContent = ps;
 
 }
 // This copies the password value - works
