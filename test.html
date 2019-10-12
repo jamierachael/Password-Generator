@@ -21,17 +21,22 @@
         <header>
             <h1>Password Generator</h1>
         </header>
+        <!--This is the content area-->
         <div id="content">
             <h2>Generate a Password</h2>
             <hr>
+            <!-- This is a readonly text area for output-->
             <textarea readonly id="password" placeholder="Your Secure Password"
                 aria-label="Generated Password"></textarea>
             <hr>
+            <!-- This is the div for the buttons -->
             <div id="btn">
+                <!-- This is the generate password button -->
                 <button id="generate">Generate
                     Password</button>
+                <!-- This is the copy button -->
                 <button id="copy">Copy to Clipboard</button>
-                </button>
+
 
             </div>
         </div>
@@ -74,7 +79,15 @@
         // Choices declared outside the if statement so they can be concatenated upon condition
         var choices;
         // Test new event listener
-        get = document.querySelector("#generate");
+
+
+        var toUpper = function (x) {
+            return x.toUpperCase();
+        };
+        // creates a variable for uppercase conversion
+        alpha2 = alpha.map(toUpper);
+
+        var get = document.querySelector("#generate");
 
         get.addEventListener("click", function () {
             ps = generatePassword();
@@ -87,11 +100,12 @@
             enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
             // First if statement for user validation 
             if (!enter) {
-                alert("Needs a value");
+                alert("This needs a value");
             } else if (enter < 8 || enter > 128) {
                 // Validates user input
                 // Start user input prompts
                 enter = parseInt(prompt("You must choose between 8 and 128"));
+
             } else {
                 // Continues once user input is validated
                 confirmNumber = confirm("Will this contain numbers?");
@@ -99,15 +113,16 @@
                 confirmUppercase = confirm("Will this contain Uppercase letters?");
                 confirmLowercase = confirm("Will this contain Lowercase letters?");
             };
+
+            // Else if for 4 negative options
+            if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
+                choices = alert("You must choose a criteria!");
+
+            }
             // First if statement that uses user input prompts to determine choices
             // Else if for 4 positive options
-            if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
-                // converts letters to uppercase 
-                toUpper = function (x) {
-                    return x.toUpperCase();
-                };
-                // creates a variable for uppercase conversion
-                alpha2 = alpha.map(toUpper);
+            else if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
+
                 choices = character.concat(number, alpha, alpha2);
             }
             // Else if for 3 positive options
@@ -155,11 +170,8 @@
             // Created space variable to fill uppercase conversion
             else if (confirmUppercase) {
                 choices = space.concat(alpha2);
-            }
-            // Else if for 4 negative options
-            else if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
-                choices = alert("You must choose a criteria!");
             };
+
             // password variable is an array placeholder for user generated amount of length
             var password = [];
 
@@ -181,6 +193,11 @@
             document.getElementById("password").textContent = ps;
 
         }
+
+        var copy = document.querySelector("#copy");
+        copy.addEventListener("click", function () {
+            copyPassword();
+        });
         // This copies the password value - works
         // Code example demonstrated in a youtube video: 
         // Source: https://youtu.be/9sT03jEwcaw

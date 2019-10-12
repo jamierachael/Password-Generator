@@ -124,6 +124,11 @@ function UserInput(ps) {
     document.getElementById("password").textContent = ps;
 
 }
+
+var copy = document.querySelector("#copy");
+copy.addEventListener("click", function () {
+    copyPassword();
+});
 // This copies the password value - works
 // Code example demonstrated in a youtube video: 
 // Source: https://youtu.be/9sT03jEwcaw
