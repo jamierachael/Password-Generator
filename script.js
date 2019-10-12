@@ -19,6 +19,12 @@ space = [];
 // Choices declared outside the if statement so they can be concatenated upon condition
 var choices;
 
+var toUpper = function (x) {
+    return x.toUpperCase();
+};
+// creates a variable for uppercase conversion
+alpha2 = alpha.map(toUpper);
+
 // Start function to generate password
 function generatePassword() {
     // Asks for user input
@@ -41,11 +47,7 @@ function generatePassword() {
     // Else if for 4 positive options
     if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
         // converts letters to uppercase 
-        toUpper = function (x) {
-            return x.toUpperCase();
-        };
-        // creates a variable for uppercase conversion
-        alpha2 = alpha.map(toUpper);
+
         choices = character.concat(number, alpha, alpha2);
     }
     // Else if for 3 positive options
@@ -92,7 +94,7 @@ function generatePassword() {
     }
     // Created space variable to fill uppercase conversion
     else if (confirmUppercase) {
-        choices = space.concat(alpha2)
+        choices = space.concat(alpha2);
     }
     // Else if for 4 negative options
     else if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
