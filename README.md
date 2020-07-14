@@ -4,10 +4,10 @@
 
 * ['Password-Generator GitHub'](https://github.com/jamierachael/Password-Generator)
 * ['Password-Generator GitHub IO'](https://jamierachael.github.io/Password-Generator/)
-* ['Password-Generator Demo Video'](https://drive.google.com/file/d/10da4Te-ywl3aBuG3pL4jRAxBcFI6w871/view)
+* [Password-Generator Demo Video](https://drive.google.com/file/d/10da4Te-ywl3aBuG3pL4jRAxBcFI6w871/view)
 
 ![](assets/Images/demo.PNG)
-![Password-Generator Demo Video](https://drive.google.com/file/d/10da4Te-ywl3aBuG3pL4jRAxBcFI6w871/view)
+
 
 
 
