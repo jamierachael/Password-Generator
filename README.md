@@ -6,7 +6,7 @@
 * ['Password-Generator GitHub IO'](https://jamierachael.github.io/Password-Generator/)
 * ['Password-Generator Demo Video'](https://drive.google.com/file/d/10da4Te-ywl3aBuG3pL4jRAxBcFI6w871/view)
 
-![](Password-Generator/assets/Images/demo.PNG)
+![](assets/Images/demo.PNG)
 
 
 
