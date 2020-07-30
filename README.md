@@ -17,6 +17,9 @@ This project has been deployed to GitHub Pages. To get this project up and runni
 
 ![Password-Generator Demo](assets/demo/demo.gif)
 
+![Password-Generator Demo](assets/demo/gif.gif)
+
+https://youtu.be/q4j90IqJkps
 
 
 ### Prerequisites
