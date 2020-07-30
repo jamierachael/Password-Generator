@@ -12,6 +12,8 @@ This project has been deployed to GitHub Pages. To get this project up and runni
 
 ![Password-Generator Demo](assets/demo/demo.gif)
 
+https://youtu.be/UPO4brW-zvg
+
 ### Prerequisites
 
 To install this application, you will need a text editor. I recommend Visual Studio Code. 
