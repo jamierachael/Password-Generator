@@ -27,11 +27,11 @@ To install this code, download the zip file, or use GitHub's guidelines to clone
 ![](assets/Images/demo.PNG)
 
 ### This project has the following features: 
-#### A generate button
-* This will send the user a series of prompts and confirms
-* After user data is collected, a random password will be generated using Javascript
+* A generate button
+    * This will send the user a series of prompts and confirms
+    * After user data is collected, a random password will be generated using Javascript
 
-![](assets/Images/generate.PNG)
+![](assets/Images/demo.PNG)
 
 * A Textarea
     * This textarea will display the users password once it is generated
