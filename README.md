@@ -48,7 +48,7 @@ To install this code, download the zip file, or use GitHub's guidelines to clone
     * Either 4 variables individual ones, or 3 with toLowerCase to Uppercase conversion
     * This will need to randomly generate a selection or randomly select array data, so math.random and math.floor will need to be used.     
 * The application should validate user input and ensure that at least one character type is selected.
-    * If, else if statement (similar to car input)
+    * If, else if statement 
 * Once all prompts are answered, the user will be presented with a password matching the answered prompts. Displaying the generated password in an alert is acceptable, but attempt to write the password to the page instead.
     * Event listener will determine the password output with function to populate the value into the test area.
 * As a bonus, the user should also have the option to click a button to copy the password to their clipboard.
