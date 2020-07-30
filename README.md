@@ -14,13 +14,7 @@ This project has been deployed to GitHub Pages. To get this project up and runni
 * [Deployed GitHub IO](https://jamierachael.github.io/Password-Generator/)
 * [Full Demo Video](https://drive.google.com/file/d/10da4Te-ywl3aBuG3pL4jRAxBcFI6w871/view)
 
-
 ![Password-Generator Demo](assets/demo/demo.gif)
-
-![Password-Generator Demo](assets/demo/gif.gif)
-
-https://youtu.be/q4j90IqJkps
-
 
 ### Prerequisites
 
