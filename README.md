@@ -31,15 +31,17 @@ To install this code, download the zip file, or use GitHub's guidelines to clone
     * This will send the user a series of prompts and confirms
     * After user data is collected, a random password will be generated using Javascript
 
-    ![](assets/images/Generate.PNG)
+![](assets/images/Generate.PNG)
+
 * A Textarea
     * This textarea will display the users password once it is generated
 
-    ![](assets/images/TextArea.PNG)
+![](assets/images/TextArea.PNG)
+
 * A Copy button 
     * This will copy the users password to the user's devices clipboard
 
-    ![](assets/images/Copy.PNG)
+![](assets/images/Copy.PNG)
 
 ### Psuedo Code and Project Requirements: 
 * The user will be prompted to choose from the following password criteria: 8 and 128 characters
