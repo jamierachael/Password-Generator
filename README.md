@@ -6,10 +6,13 @@ This application emphasizes the use of Javascript to generate a random, secure p
 
 This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. Or, download the sources files to use this as a template.
 
+## Getting Started
+
+This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. Or, download the sources files to use this as a template.
+
 * [GitHub Repository](https://github.com/jamierachael/Password-Generator)
 * [Deployed GitHub IO](https://jamierachael.github.io/Password-Generator/)
 * [Full Demo Video](https://drive.google.com/file/d/10da4Te-ywl3aBuG3pL4jRAxBcFI6w871/view)
-
 
 
 ![Password-Generator Demo](assets/demo/demo.gif)
