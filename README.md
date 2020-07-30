@@ -1,31 +1,47 @@
 # Password-Generator
-# Homework-3 Password-Generator
-## Jamie Morris Homework-3 Random Password Generator
 
-* [Password-Generator GitHub](https://github.com/jamierachael/Password-Generator)
-* [Password-Generator DEPLOYED GitHub IO](https://jamierachael.github.io/Password-Generator/)
-* [Password-Generator Demo Video](https://drive.google.com/file/d/10da4Te-ywl3aBuG3pL4jRAxBcFI6w871/view)
+This project was designed as a homework assignment for UNH's coding bootcamp. 
 
-![](assets/Images/demo.PNG)
+This application emphasizes the use of Javascript to generate a random, secure password for the user. 
 
+This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. Or, download the sources files to use this as a template.
 
+* [GitHub Repository](https://github.com/jamierachael/Password-Generator)
+* [Deployed GitHub IO](https://jamierachael.github.io/Password-Generator/)
+* [Full Demo Video](https://drive.google.com/file/d/10da4Te-ywl3aBuG3pL4jRAxBcFI6w871/view)
 
+![Password-Generator Demo](assets/demo/demo.gif)
 
+### Prerequisites
+
+To install this application, you will need a text editor. I recommend Visual Studio Code. 
+
+### Installing
+
+To install this code, download the zip file, or use GitHub's guidelines to clone the repository. 
 
 ### Summary
 * HTML and CSS and Javascript documents create a random password generator 
 * This project emphasizes the use of using Javascript to make dynamic changes to an HMTL document
 
+![](assets/Images/demo.PNG)
+
 ### This project has the following features: 
 * A generate button
     * This will send the user a series of prompts and confirms
     * After user data is collected, a random password will be generated using Javascript
+
+    ![](assets/images/Generate.PNG)
 * A Textarea
     * This textarea will display the users password once it is generated
-* A Copy buttom 
+
+    ![](assets/images/TextArea.PNG)
+* A Copy button 
     * This will copy the users password to the user's devices clipboard
 
-### Psuedo code: 
+    ![](assets/images/Copy.PNG)
+
+### Psuedo Code and Project Requirements: 
 * The user will be prompted to choose from the following password criteria: 8 and 128 characters
 * The user will recieve a confirm for: 
     * Password containing special characters, numbers, and uppercase
@@ -81,12 +97,14 @@
         * One function outside of first event listener
 
 
-### Code Validation 
-    * These use W3C Code Validators for HTML and CSS
-    * Please provide feedback whether this image syntax is correct
-        * Format: ![Validator-HTML-Index](assets/images/Validator-HTML-Index)
-        * Format: ![Validator-CSS](assets/images/Validator-CSS)
-        * Format: ![Validator-CSS](assets/images/Validator-JS)
+## Authors
+
+* **Jamie Rachael Morris** - *Initial work* - [Git Hub Profile](https://github.com/jamierachael)
+* UNH Project Design
+
+## Acknowledgments
+
+* Hat tip to UNH for providing project parameters and code examples
 
 
 
